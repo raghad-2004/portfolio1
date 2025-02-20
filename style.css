@@ -1,0 +1,836 @@
+:root{
+  --primarycolor:#16c47f;
+  --secondarycolor:#ffd65a;
+  --lightcolor:#ffffff;
+  --bgcolor-1:#171a1c;
+  --bgcolor-2:#22282a;
+  --padding: 8%;
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  font-family: "Oswald", serif;
+  font-size: 16px;
+  color: var(--lightcolor);
+}
+
+.home{
+  width: 100%;
+  height: 100vh;
+  background-color: var(--bgcolor-1);
+  display: flex;
+  flex-direction: column;
+}
+/*اكواد اسم الموقع*/
+span{
+  color: var(--primarycolor);
+}
+
+h2{
+  font-size: 32px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+/* اكواد القائمة */
+nav{
+  
+  padding-top: 35px;
+  padding-left: var(--padding);
+  padding-right: var(--padding);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul li{
+  list-style-type:none ;
+  display: inline-block;
+  margin: 5px 32px;
+}
+
+nav ul li a{
+  color: var(--lightcolor);
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.4s;
+}
+nav ul li a:hover{
+  color: var(--primarycolor);
+}
+/* اكواد النصوص*/
+
+ .btn{
+  background-color: var(--primarycolor);
+  color: var(--lightcolor);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 30px;
+  border: 2px solid transparent;
+  transition: 0.4s;
+}
+ .btn:hover{
+  background-color: transparent;
+  border: 2px solid var(--primarycolor);
+
+}
+.content{
+  flex-grow:1 ;
+  padding: 0 var(--padding);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container-texts{
+  position: relative;
+  bottom: 70px;
+}
+ p{
+  font-weight:bold ;
+}
+h1{
+  font-size: 50px;
+  margin: 16px 0;
+  
+}
+h3{
+  font-size: 16px;
+  margin-bottom:30px;
+}
+h4{
+  font-size: 16px;
+  letter-spacing:  2px;
+  color: var(--primarycolor);
+}
+/* اكواد الصورة*/
+ .home .img{
+  width: 45%;
+  height:90% ;
+  position: relative;
+  align-self: flex-end;
+  
+}
+.home .img img{
+  position: absolute;
+  bottom: 20;
+left: 50%;
+  height: 400px;
+  transform: translatex(-50%);
+  transition:  bottom 1s,left 1s;
+
+}
+.home .img:hover .pic{
+  left: 55%;
+
+}
+.about{
+  background-color: var(--primarycolor);
+  padding: 2rem var(--padding);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+  
+
+}
+.about .img{
+  width: 35%;
+ 
+}
+
+.about .img img{
+width: 90%;
+
+  
+  
+}
+.about .con-text{
+  width: 35%;
+}
+p{
+  letter-spacing: 1px;
+  line-height: 1.8rem;
+  font-size: 1rem;
+}
+h5{
+  font-size: 1.37rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 2px;
+}
+.services{
+  background-color: var(--bgcolor-1);
+  padding: 2rem var(--padding);
+}
+.text-center{
+  text-align: center;
+}
+.box{
+display:flex;
+justify-content:space-between;
+
+
+}
+.card{
+  width: 300px;
+  background-color:var(--primarycolor);
+  border-radius:20px ;
+  padding:1.3rem 2rem;
+  /* هذي ضفتهامن تشات جبتي*/
+  margin-right: 20px;
+  text-align: center;
+
+}
+.par{
+  color: var(--bgcolor-1);
+}
+.card i{
+  font-size: 3.12rem;
+  text-align: center;
+  margin: 2rem;
+}
+
+.skills{
+  background-color: var(--primarycolor);
+  padding: 2rem var(--padding);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skills .img{
+  width: 35%;
+}
+.skills .img img{
+  width: 90%;
+  
+}
+/* هنا اتحكم بالصور*/
+.container-skills  .skill{
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+
+}
+.container-skills  .con-skills .skill{
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  left: 18%;
+
+  
+}
+.skill img{
+  padding: 7px;
+}
+.skills .container-skills{
+  width: 40%;
+}
+.container-skills .tit{
+  display: flex;
+  justify-content: center;
+}
+footer{
+  padding:  2rem var(--padding);
+  background-color: var(--bgcolor-1);
+}
+footer .con-fot{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .con-fot p{
+  text-align: center;
+  width: 500px;
+  margin-top: 1rem;
+}
+
+footer .con-fot .end{
+  margin-top: 1rem;
+  color: var(--primarycolor);
+}
+
+
+
+
+#menu{
+  display: none;
+  position:
+   relative;
+  appearance: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  user-select: none;
+}
+#menu span{
+  display: block;
+  width: 32px;
+  height: 4px;
+  background-color: var(--lightcolor);
+  border-radius: 6px;
+  transform-origin: 0 0;
+  transition: 0.4s;
+  margin-bottom: 5px;
+}
+#menu.is-active span:nth-child(1){
+  transform: translate(0px,-2px) rotate(45deg);
+
+}
+#menu.is-active span:nth-child(2){
+  opacity: 0;
+  transform: translateX(15px);
+}
+
+#menu.is-active span:nth-child(3){
+  transform: translate(-3px,3px) rotate(-45deg);
+
+}
+
+#menu.is-active span{
+  background-color: var(--primarycolor);
+}
+footer p:hover{
+  color: var(--primarycolor);
+  }
+footer a{
+  color: var(--lightcolor);
+  text-decoration: none;
+}
+footer p a:hover{
+color: var(--primarycolor);
+}
+
+/*1*/
+
+@media screen and (max-width:575px) {
+  :root{
+    --padding:1.5rem
+  }
+  html{
+    font-size: 13px;
+  }
+  .home .img{
+    display: none;
+  }
+  nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top: 0;
+    height: 82px;
+    background-color: var(--bgcolor-1);
+    border-bottom: 1px solid var(--bgcolor-2);
+    z-index: 100;
+  }
+  nav > a{
+    display: none;
+  }
+  nav ul{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50vw;
+    height: 100vh;
+    background: var(--bgcolor-2);
+  }
+  nav ul.is-active{
+    display: block;
+  }
+  nav ul li{
+    display: block;
+    text-align: center;
+    margin: 50px;
+  }
+  .container-texts{
+
+    bottom: 0;
+  }
+  h3{
+    margin-bottom: 70px;
+  }
+  #menu{
+    display: block;
+  }
+  .about .img{
+    display: none;
+  }
+  .about .con-text{
+    width: 100%;
+  }
+
+  .box{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  
+  .skills .img img{
+    display: none;
+  }
+  
+  .container-skills h1{
+       font-size: 60px;
+       position: 50%;
+  }
+    .skills .container-skills {
+      width: 100%; 
+      align-items: center;
+      justify-content: center;
+      position: relative;
+        right: 12%;
+    }
+    
+    .skills {
+      background-color: var(--primarycolor);
+      padding: 2rem var(--padding);
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      align-content: stretch;
+      flex-direction: row-reverse;
+      flex-wrap: nowrap;
+      
+      
+      
+      
+
+  }
+  
+  footer .con-fot p{
+    width: 100%;
+  }
+}
+
+
+
+/*2*/
+
+@media screen and (min-width:576px) and (max-width:767px) {
+  :root{
+    --padding:1.5rem
+  }
+  html{
+    font-size: 13px;
+  }
+  .home .img{
+    display: none;
+  }
+  nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top: 0;
+    height: 82px;
+    background-color: var(--bgcolor-1);
+    border-bottom: 1px solid var(--bgcolor-2);
+    z-index: 100;
+  }
+  nav > a{
+    display: none;
+  }
+  .content{
+    padding-top: 82px;
+  }
+  nav ul{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50vw;
+    height: 100vh;
+    background: var(--bgcolor-2);
+  }
+  nav ul.is-active{
+    display: block;
+  }
+  nav ul li{
+    display:block;
+    text-align: center;
+    margin: 50px;
+  }
+  .container-texts{
+
+    bottom: 0;
+  }
+  h3{
+    margin-bottom: 30px;
+  }
+  #menu{
+    display: block;
+  }
+  .about .img{
+    display: none;
+  }
+  .about .con-text{
+    width: 100%;
+  }
+
+  .box{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  
+  .skills .img img{
+    display: none;
+  }
+  .skills .img img{
+    display: none;
+  }
+  
+    .skills .container-skills {
+      width: 100%; 
+      font-size: 50px; 
+      align-items: center;
+      justify-content: center;
+      position: relative;
+        left: 12%;
+      
+    
+    }
+    
+    .skill{
+      justify-content: center; /* محاذاة الصور في المنتصف أفقياً */
+      align-items: center; /* محاذاة الصور في المنتصف عمودياً */
+      
+      
+      
+    }
+  
+  footer .con-fot p{
+    width: 100%;
+  }
+}
+
+
+
+/*3*/
+
+@media screen and (min-width:768px) and (max-width:991px) {
+  :root{
+    --padding:1.5rem
+  }
+  html{
+    font-size: 13px;
+  }
+  .home .img{
+    display: none;
+  }
+  nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top: 0;
+    height: 82px;
+    background-color: var(--bgcolor-1);
+    border-bottom: 1px solid var(--bgcolor-2);
+    z-index: 100;
+  }
+  nav > a{
+    display: none;
+  }
+  nav ul{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50vw;
+    height: 100vh;
+    background:var(--bgcolor-2);
+  }
+  nav ul.is-active{
+    display: block;
+  }
+  nav ul li{
+    display: block;
+    text-align: center;
+    margin: 50px;
+  }
+  .container-texts{
+
+    bottom: 0;
+  }
+  h3{
+    margin-bottom: 70px;
+  }
+  #menu{
+    display: block;
+  }
+  .about .img{
+    display: none;
+  }
+  .about .con-text{
+    width: 100%;
+  }
+
+  .box{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  
+  .skills .img img{
+    display: none;
+  }
+  .skills .img img{
+    display: none;
+  }
+  
+    .skills .container-skills {
+      width: 100%; 
+      font-size: 50px; 
+      align-items: center;
+      justify-content: center;
+      position: relative;
+        left: 10%;
+      
+    
+    }
+    
+    .skill{
+      justify-content: center; /* محاذاة الصور في المنتصف أفقياً */
+      align-items: center; /* محاذاة الصور في المنتصف عمودياً */
+      
+      
+      
+    }
+  
+  footer .con-fot p{
+    width: 100%;
+  }
+}
+
+
+/*4*/
+
+@media screen and (min-width:992px) and (max-width:1279px) {
+  :root{
+    --padding:1.5rem
+  }
+  html{
+    font-size: 13px;
+  }
+  .home .img{
+    display: none;
+  
+    
+    
+  }
+  nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top: 0;
+    height: 82px;
+    background-color: var(--bgcolor-1);
+    border-bottom: 1px solid var(--bgcolor-2);
+    z-index: 100;
+  }
+  nav > a{
+    display: none;
+  }
+  nav ul{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50vw;
+    height: 100vh;
+    background: var(--bgcolor-2);
+  }
+  nav ul.is-active{
+    display: block;
+  }
+  nav ul li{
+    display: block;
+    text-align: center;
+    margin: 50px;
+  }
+  .container-texts{
+
+    bottom: 0;
+  }
+  h3{
+    margin-bottom: 70px;
+  }
+  #menu{
+    display: block;
+  }
+  .about .img{
+    display: none;
+  }
+  .about .con-text{
+    width: 100%;
+  }
+
+  .box{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  
+  .skills .img img{
+    display: none;
+  }
+  
+  
+    .skills .container-skills {
+      width: 100%; 
+      font-size: 30px; 
+      align-items: center;
+      justify-content: center;
+      position: relative;
+        left: 11%;
+    
+    }
+    
+    
+    .skill{
+      justify-content: center; /* محاذاة الصور في المنتصف أفقياً */
+      align-items: center; /* محاذاة الصور في المنتصف عمودياً */
+      
+      
+      
+    }
+  
+  footer .con-fot p{
+    width: 100%;
+  }
+}
+
+/*5*/
+
+@media screen and (min-width:400px) and (max-width:678px) {
+  :root{
+    --padding:1.5rem
+  }
+  html{
+    font-size: 10px;
+  }
+  .home .img{
+    display: none;
+  
+    
+    
+  }
+  nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top: 0;
+    height: 85px;
+    border-bottom: 1px solid var(--bgcolor-1);
+    
+    z-index: 100;
+  }
+  nav h2{
+    font-size: 25px;
+  }
+  nav > a{
+    display: none;
+  }
+  nav ul{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50vw;
+    height: 100vh;
+    background: var(--bgcolor-2);
+  }
+  nav ul.is-active{
+    display: block;
+  }
+  nav ul li{
+    display: block;
+    text-align: center;
+    margin: 50px;
+  }
+  .container-texts{
+
+    bottom: 0;
+  }
+  h3{
+    margin-bottom: 70px;
+  }
+  #menu{
+    display: block;
+  }
+  .about .img{
+    display: none;
+  }
+  .about .con-text{
+    width: 100%;
+  }
+
+  .box{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  
+  .skills .img img{
+    display: none;
+  }
+  
+  
+    .skills .container-skills {
+      width: 100%; 
+      font-size: 50px; 
+      align-items: center;
+      justify-content: center;
+      position: relative; 
+        right: 50px;
+    
+    }
+    
+    .skills .tit{
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    
+      left:12px;
+
+    }
+    .skill{
+      justify-content: center; /* محاذاة الصور في المنتصف أفقياً */
+      align-items: center; /* محاذاة الصور في المنتصف عمودياً */
+      
+      
+      
+    }
+  
+  footer .con-fot p a{
+    width: 100%;
+  }
+  footer h2{
+    font-size: 20px;
+  }
+  }
